@@ -1,6 +1,10 @@
-# CodeSnap
+# **This is a fork** of CodeSnap
 
 📸 Take beautiful screenshots of your code in VS Code!
+
+## Fork changes:
+
+- Line Breaks: Changed so it doesn't break words in half
 
 ## Features
 
