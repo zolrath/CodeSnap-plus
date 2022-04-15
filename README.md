@@ -2,9 +2,13 @@
 
 📸 Take beautiful screenshots of your code in VS Code!
 
-## Fork changes:
+## This fork changes:
 
-- Line Breaks: Changed so it doesn't break words in half
+- Line breaks: changed so it doesn't break words in half.
+
+## Original from @adpyke
+
+- Install: `ext install adpyke.codesnap`
 
 ## Features
 
