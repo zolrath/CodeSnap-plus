@@ -12,7 +12,7 @@ jobs:
   publish-vsce:
     name: "vsce-publish"
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.merged && github.head_ref == 'package/vitawind' }}
+    if: ${{ github.event.pull_request.merged && github.head_ref == 'dev' }}
     steps:
       - name: checkout
         uses: actions/checkout@v2
