@@ -23,43 +23,27 @@ const setupLines = (node, config) => {
 
         if(this.parentNode.classList.contains("line-focus")) {
           
-          this.classList.remove("line-focus-for-linenubmer");
           this.parentNode.classList.remove("line-focus");
-
-          this.classList.add("git-add-for-linenubmer");
           this.parentNode.classList.add("git-add");
-
           this.classList.add('!text-white')
 
         } else if (this.parentNode.classList.contains("git-add")) {
 
-          this.classList.remove("git-add-for-linenubmer");
           this.parentNode.classList.remove("git-add");
-
-          this.classList.add("git-remove-for-linenubmer");
           this.parentNode.classList.add("git-remove");
-          
           this.classList.add('!text-white')
 
         } else if (this.parentNode.classList.contains("git-remove")) {
           
-          this.classList.remove("line-focus-for-linenubmer");
           this.parentNode.classList.remove("line-focus");
-          this.classList.remove("git-add-for-linenubmer");
           this.parentNode.classList.remove("git-add");
-          this.classList.remove("git-remove-for-linenubmer");
           this.parentNode.classList.remove("git-remove");
-          
           lineNum.classList.remove('text-white')
 
         } else {
-          this.classList.add("line-focus-for-linenubmer");
           this.parentNode.classList.add("line-focus");
-          this.classList.remove("git-add-for-linenubmer");
           this.parentNode.classList.remove("git-add");
-          this.classList.remove("git-remove-for-linenubmer");
           this.parentNode.classList.remove("git-remove");
-          
           lineNum.classList.add('!text-white')
         }
       };

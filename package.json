@@ -121,6 +121,16 @@
           ],
           "default": "save",
           "description": "The behavior of the shutter button"
+        },
+        "codesnap-plus.toolMode": {
+          "scope": "resource",
+          "type": "string",
+          "enum": [
+            "simple",
+            "advanced"
+          ],
+          "default": "advanced",
+          "description": "The mode of tool, mode \"simple\" will only show the shutter button"
         }
       }
     }
