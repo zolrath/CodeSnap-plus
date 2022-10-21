@@ -4,6 +4,8 @@
 📸 Take beautiful screenshots of your code in VS Code! 
 And you can hightlight the line just by click the line number.
 
+![UI](https://raw.githubusercontent.com/huibizhang/CodeSnap-plus/master/examples/ui.png)
+
 ## Features
 
 - Can hightlight the line if you click line number
@@ -94,6 +96,8 @@ CodeSnap is highly configurable. Here's a list of settings you can change to tun
 **`codesnap-plus.target`:** Either `container` to take the screenshot with the container, or `window` to only take the window.
 
 **`codesnap-plus.shutterAction`:** Either `save` to save the screenshot into a file, or `copy` to copy the screenshot into the clipboard.
+
+**`codesnap-plus.toolMode`:** Either `advaced` to the tools on toolbar, or `simple` to only show the shutter button.
 
 ## Acknowledgements
 
