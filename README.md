@@ -1,6 +1,14 @@
-# CodeSnap
+# **This is a fork** of CodeSnap
 
 📸 Take beautiful screenshots of your code in VS Code!
+
+## This fork changes:
+
+- Line breaks: changed so it doesn't break words in half.
+
+## Original from @adpyke
+
+- Install: `ext install adpyke.codesnap`
 
 ## Features
 

@@ -86,6 +86,9 @@ body {
   flex-wrap: wrap;
   width: 100%;
 }
+.line-code > span > span {
+  display: inline-block;
+}
 #save-container {
   margin-top: 1rem;
   margin-bottom: 1rem;
