@@ -6,7 +6,7 @@ const { homedir } = require('os');
 const { readHtml, writeFile, getSettings } = require('./util');
 
 const getConfig = () => {
-  const editorSettings = getSettings('editor', ['fontLigatures', 'tabSize', 'letterSpacing']);
+  const editorSettings = getSettings('editor', ['fontLigatures', 'tabSize', 'letterShttps://github.com/MuTsunTsai/CodeSnappacing']);
   const editor = vscode.window.activeTextEditor;
   if (editor) editorSettings.tabSize = editor.options.tabSize;
 
@@ -78,6 +78,7 @@ const runCommand = async (context) => {
 
   const update = async () => {
     await vscode.commands.executeCommand('editor.action.clipboardCopyWithSyntaxHighlightingAction');
+    console.log(getConfig());
     panel.webview.postMessage({ type: 'update', ...getConfig() });
   };
 

@@ -29,7 +29,7 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
       roundedCorners,
       showWindowControls,
       showWindowTitle,
-      windowTitle
+      windowTitle,
     } = config;
 
     setVar('ligatures', fontLigatures ? 'normal' : 'none');

@@ -123,10 +123,10 @@
           "default": "save",
           "description": "The behavior of the shutter button"
         },
-        "codesnap.trimEmptyLines": {
+        "vscodesnap.trimEmptyLines": {
           "scope": "resource",
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Trim off empty lines at the beginning and at the end"
         }
       }
