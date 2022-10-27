@@ -10,7 +10,7 @@ const getConfig = () => {
   const editor = vscode.window.activeTextEditor;
   if (editor) editorSettings.tabSize = editor.options.tabSize;
 
-  const extensionSettings = getSettings('codesnap', [
+  const extensionSettings = getSettings('vscodesnap', [
     'backgroundColor',
     'boxShadow',
     'containerPadding',
@@ -43,8 +43,8 @@ const getConfig = () => {
 
 const createPanel = async (context) => {
   const panel = vscode.window.createWebviewPanel(
-    'codesnap',
-    'CodeSnap 📸',
+    'VSCodeSnap',
+    'VSCodeSnap 📸',
     { viewColumn: vscode.ViewColumn.Beside, preserveFocus: true },
     {
       enableScripts: true,
@@ -87,7 +87,7 @@ const runCommand = async (context) => {
       flash();
       await saveImage(data);
     } else {
-      vscode.window.showErrorMessage(`CodeSnap 📸: Unknown shutterAction "${type}"`);
+      vscode.window.showErrorMessage(`VSCodeSnap 📸: Unknown shutterAction "${type}"`);
     }
   });
 
@@ -102,5 +102,5 @@ const runCommand = async (context) => {
 
 module.exports.activate = (context) =>
   context.subscriptions.push(
-    vscode.commands.registerCommand('codesnap.start', () => runCommand(context))
+    vscode.commands.registerCommand('vscodesnap.start', () => runCommand(context))
   );

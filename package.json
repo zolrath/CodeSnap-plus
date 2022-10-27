@@ -1,13 +1,13 @@
 {
-  "name": "codesnap",
-  "displayName": "CodeSnap",
+  "name": "vscodesnap",
+  "displayName": "VSCodeSnap",
   "description": "📷 Take beautiful screenshots of your code",
-  "version": "1.3.4",
+  "version": "1.4.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kufii/CodeSnap"
+    "url": "https://github.com/luisllamasbinaburo/VSCodeSnap"
   },
-  "publisher": "adpyke",
+  "publisher": "luisllamas",
   "icon": "icon.png",
   "license": "MIT",
   "engines": {
@@ -21,88 +21,89 @@
     "share",
     "polacode",
     "carbon",
-    "codesnap"
+    "codesnap",
+    "vscodesnap"
   ],
   "categories": [
     "Other"
   ],
   "activationEvents": [
-    "onCommand:codesnap.start"
+    "onCommand:vscodesnap.start"
   ],
   "main": "./src/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "codesnap.start",
-        "title": "CodeSnap 📸"
+        "command": "vscodesnap.start",
+        "title": "VSCodeSnap 📸"
       }
     ],
     "menus": {
       "editor/context": [
         {
-          "command": "codesnap.start"
+          "command": "vscodesnap.start"
         }
       ]
     },
     "configuration": {
       "type": "object",
-      "title": "CodeSnap",
+      "title": "VSCodeSnap",
       "properties": {
-        "codesnap.backgroundColor": {
+        "vscodesnap.backgroundColor": {
           "scope": "resource",
           "type": "string",
           "default": "#abb8c3",
           "description": "The background color of the snippet's container"
         },
-        "codesnap.boxShadow": {
+        "vscodesnap.boxShadow": {
           "scope": "resource",
           "type": "string",
           "default": "rgba(0, 0, 0, 0.55) 0px 20px 68px",
           "description": "The CSS box-shadow for the snippet"
         },
-        "codesnap.containerPadding": {
+        "vscodesnap.containerPadding": {
           "scope": "resource",
           "type": "string",
           "default": "3em",
           "description": "The padding for the snippet's container"
         },
-        "codesnap.roundedCorners": {
+        "vscodesnap.roundedCorners": {
           "scope": "resource",
           "type": "boolean",
           "default": true,
           "description": "Use rounded corners for the window"
         },
-        "codesnap.showWindowControls": {
+        "vscodesnap.showWindowControls": {
           "scope": "resource",
           "type": "boolean",
           "default": true,
           "description": "Display OS X style window controls"
         },
-        "codesnap.showWindowTitle": {
+        "vscodesnap.showWindowTitle": {
           "scope": "resource",
           "type": "boolean",
           "default": false,
           "description": "Display window title with open folder / file name"
         },
-        "codesnap.showLineNumbers": {
+        "vscodesnap.showLineNumbers": {
           "scope": "resource",
           "type": "boolean",
           "default": true,
           "description": "Display line numbers"
         },
-        "codesnap.realLineNumbers": {
+        "vscodesnap.realLineNumbers": {
           "scope": "resource",
           "type": "boolean",
           "default": false,
           "description": "Start from the selection's line number instead of 1"
         },
-        "codesnap.transparentBackground": {
+        "vscodesnap.transparentBackground": {
           "scope": "resource",
           "type": "boolean",
           "default": false,
           "description": "Use a transparent background when taking the screenshot"
         },
-        "codesnap.target": {
+        "vscodesnap.target": {
           "scope": "resource",
           "type": "string",
           "enum": [
@@ -112,7 +113,7 @@
           "default": "container",
           "description": "Take the shot with or without the container"
         },
-        "codesnap.shutterAction": {
+        "vscodesnap.shutterAction": {
           "scope": "resource",
           "type": "string",
           "enum": [
