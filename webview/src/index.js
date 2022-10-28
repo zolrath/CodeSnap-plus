@@ -7,14 +7,18 @@ const windowControlsNode = $('#window-controls');
 const windowTitleNode = $('#window-title');
 const btnSave = $('#button-save');
 const btnCopy = $('#button-copy');
+const sliderZoom = $('#slider-zoom');
 
 let config;
 
 btnSave.addEventListener('click', () => takeSnap({ ...config, shutterAction: 'save' }));
 btnCopy.addEventListener('click', () => takeSnap({ ...config, shutterAction: 'copy' }));
 
+sliderZoom.addEventListener('input', (e) => setVar('preview-zoom', sliderZoom.value / 100));
+
 document.addEventListener('copy', () => takeSnap({ ...config, shutterAction: 'copy' }));
 document.addEventListener('paste', (e) => pasteCode(config, e.clipboardData));
+
 
 window.addEventListener('message', ({ data: { type, ...cfg } }) => {
   if (type === 'update') {
@@ -42,7 +46,7 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
     setVar('container-padding', containerPadding);
     setVar('window-border-radius', windowBorderRadius);
     
-    setVar('preview-zoom', 0.5);
+    setVar('preview-zoom', 0.75);
 
     navbarNode.hidden = !showWindowControls && !showWindowTitle;
     windowControlsNode.hidden = !showWindowControls;

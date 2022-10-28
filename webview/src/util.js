@@ -12,6 +12,9 @@ export const redraw = (node) => node.clientHeight;
 export const setVar = (key, value, node = document.body) =>
   node.style.setProperty('--' + key, value);
 
+export const getVar = (key, node = document.body) =>
+   node.style.getPropertyValue('--' + key);
+
 export const calcTextWidth = (text) => {
   const div = document.body.appendChild(document.createElement('div'));
   div.classList.add('size-test');

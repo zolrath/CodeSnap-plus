@@ -4,6 +4,7 @@ import {
   redraw,
   once,
   setVar,
+  getVar,
   consoleLog
 } from './util.js';
 
@@ -31,7 +32,10 @@ export const takeSnap = async (config) => {
     setVar('container-background', 'transparent');
   }
 
+  let currentZoom = getVar('preview-zoom');
+  consoleLog(currentZoom);
   setVar('preview-zoom', 1.0);
+  consoleLog(currentZoom);
   const target = config.target === 'container' ? snippetContainerNode : windowNode;
 
   const url = await domtoimage.toPng(target, {
@@ -66,5 +70,7 @@ export const takeSnap = async (config) => {
 
   windowNode.style.resize = 'horizontal';
   setVar('container-background', config.backgroundColor);
-  setVar('preview-zoom', 0.5);
+  consoleLog(currentZoom);
+  setVar('preview-zoom', currentZoom);
+  consoleLog(currentZoom);
 };
