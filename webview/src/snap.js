@@ -1,4 +1,4 @@
-import { $, $$, redraw, once, setVar } from './util.js';
+import { $, $$, redraw, once, setVar, consoleLog } from './util.js';
 
 const vscode = acquireVsCodeApi();
 const windowNode = $('#window');
@@ -18,11 +18,12 @@ export const cameraFlashAnimation = async () => {
 };
 
 export const takeSnap = async (config) => {
+
   windowNode.style.resize = 'none';
   if (config.transparentBackground || config.target === 'window') {
-    setVar('container-background-color', 'transparent');
+    setVar('container-background', 'transparent');
   }
-
+  
   const target = config.target === 'container' ? snippetContainerNode : windowNode;
 
   const url = await domtoimage.toPng(target, {
@@ -49,5 +50,5 @@ export const takeSnap = async (config) => {
   }
 
   windowNode.style.resize = 'horizontal';
-  setVar('container-background-color', config.backgroundColor);
+  setVar('container-background', config.backgroundColor);
 };
