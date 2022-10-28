@@ -1,4 +1,11 @@
-import { $, $$, redraw, once, setVar, consoleLog } from './util.js';
+import {
+  $,
+  $$,
+  redraw,
+  once,
+  setVar,
+  consoleLog
+} from './util.js';
 
 const vscode = acquireVsCodeApi();
 const windowNode = $('#window');
@@ -23,7 +30,7 @@ export const takeSnap = async (config) => {
   if (config.transparentBackground || config.target === 'window') {
     setVar('container-background', 'transparent');
   }
-  
+
   const target = config.target === 'container' ? snippetContainerNode : windowNode;
 
   const url = await domtoimage.toPng(target, {
@@ -42,11 +49,18 @@ export const takeSnap = async (config) => {
     const binary = atob(data);
     const array = new Uint8Array(binary.length);
     for (let i = 0; i < binary.length; i++) array[i] = binary.charCodeAt(i);
-    const blob = new Blob([array], { type: 'image/png' });
-    navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+    const blob = new Blob([array], {
+      type: 'image/png'
+    });
+    navigator.clipboard.write([new ClipboardItem({
+      'image/png': blob
+    })]);
     cameraFlashAnimation();
   } else {
-    vscode.postMessage({ type: config.shutterAction, data });
+    vscode.postMessage({
+      type: config.shutterAction,
+      data
+    });
   }
 
   windowNode.style.resize = 'horizontal';

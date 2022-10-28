@@ -5,11 +5,13 @@ import { takeSnap, cameraFlashAnimation } from './snap.js';
 const navbarNode = $('#navbar');
 const windowControlsNode = $('#window-controls');
 const windowTitleNode = $('#window-title');
-const btnSave = $('#save');
+const btnSave = $('#button-save');
+const btnCopy = $('#button-copy');
 
 let config;
 
 btnSave.addEventListener('click', () => takeSnap(config));
+btnCopy.addEventListener('click', () => takeSnap({ ...config, shutterAction: 'copy' }));
 
 document.addEventListener('copy', () => takeSnap({ ...config, shutterAction: 'copy' }));
 
