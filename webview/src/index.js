@@ -1,4 +1,4 @@
-import { $, setVar } from './util.js';
+import { $, setVar, consoleLog} from './util.js';
 import { pasteCode } from './code.js';
 import { takeSnap, cameraFlashAnimation } from './snap.js';
 

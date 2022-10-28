@@ -3,7 +3,9 @@ export const $ = (q, c = document) => c.querySelector(q);
 export const $$ = (q, c = document) => Array.from(c.querySelectorAll(q));
 
 export const once = (elem, evt) =>
-  new Promise((done) => elem.addEventListener(evt, done, { once: true }));
+  new Promise((done) => elem.addEventListener(evt, done, {
+    once: true
+  }));
 
 export const redraw = (node) => node.clientHeight;
 
@@ -17,4 +19,12 @@ export const calcTextWidth = (text) => {
   const width = div.clientWidth;
   div.remove();
   return width + 1 + 'px';
+};
+
+export const consoleLog = (text) => {
+  let p = document.createElement('p');
+  let textnode = document.createTextNode(text);
+  p.appendChild(textnode);
+  
+  $('#console-log').appendChild(p);
 };
