@@ -36,9 +36,7 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
       showWindowTitle,
       windowTitle,
     } = config;
-
-    consoleLog(fontLigatures);
-
+    
     setVar('ligatures', fontLigatures ? 'normal' : 'none');
     if (typeof fontLigatures === 'string') setVar('font-features', fontLigatures);
     setVar('letter-spacing', letterSpacing);

@@ -66,6 +66,6 @@ export const takeSnap = async (config) => {
   }
 
   windowNode.style.resize = 'horizontal';
-  setVar('container-background', config.backgroundColor);
+  setVar('container-background', config.containerBackground);
   setVar('preview-zoom', currentZoom);
 };
