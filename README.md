@@ -65,19 +65,19 @@ VSCodeSnap is highly configurable. Here's a list of settings you can change to t
 
 ## Examples
 
-![Example gradient](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/gradient-background-code.png)
+![Example gradient](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/gradient-background-code.png)
 
 [Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) + [Operator Mono](https://www.typography.com/fonts/operator/styles/operatormono)
 
-![Example 1](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/material_operator-mono.png)
+![Example 1](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/material_operator-mono.png)
 
 [Nord](https://github.com/arcticicestudio/nord-visual-studio-code) + [Cascadia Code](https://github.com/microsoft/cascadia-code)
 
-![Example 2](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/nord_cascadia-code.png)
+![Example 2](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/nord_cascadia-code.png)
 
 Monokai + [Fira Code](https://github.com/tonsky/FiraCode)
 
-![Example 3](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/monokai_fira-code.png)
+![Example 3](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/monokai_fira-code.png)
 
 ## Acknowledgements
 
