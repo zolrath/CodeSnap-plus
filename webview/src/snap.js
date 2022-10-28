@@ -26,16 +26,13 @@ export const cameraFlashAnimation = async () => {
 };
 
 export const takeSnap = async (config) => {
-
   windowNode.style.resize = 'none';
   if (config.transparentBackground || config.target === 'window') {
     setVar('container-background', 'transparent');
   }
 
   let currentZoom = getVar('preview-zoom');
-  consoleLog(currentZoom);
   setVar('preview-zoom', 1.0);
-  consoleLog(currentZoom);
   const target = config.target === 'container' ? snippetContainerNode : windowNode;
 
   const url = await domtoimage.toPng(target, {
@@ -70,7 +67,5 @@ export const takeSnap = async (config) => {
 
   windowNode.style.resize = 'horizontal';
   setVar('container-background', config.backgroundColor);
-  consoleLog(currentZoom);
   setVar('preview-zoom', currentZoom);
-  consoleLog(currentZoom);
 };
