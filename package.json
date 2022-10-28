@@ -73,6 +73,12 @@
           "default": true,
           "description": "Use rounded corners for the window"
         },
+        "vscodesnap.windowBorderRadius": {
+          "scope": "resource",
+          "type": "string",
+          "default": "4px",
+          "description": "Rounded corners for the window"
+        },
         "vscodesnap.showWindowControls": {
           "scope": "resource",
           "type": "boolean",

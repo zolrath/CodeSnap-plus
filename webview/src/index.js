@@ -27,6 +27,7 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
       boxShadow,
       containerPadding,
       roundedCorners,
+      windowBorderRadius,
       showWindowControls,
       showWindowTitle,
       windowTitle,
@@ -39,7 +40,7 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
     setVar('container-background-color', backgroundColor);
     setVar('box-shadow', boxShadow);
     setVar('container-padding', containerPadding);
-    setVar('window-border-radius', roundedCorners ? '4px' : 0);
+    setVar('window-border-radius', roundedCorners ? windowBorderRadius : 0);
 
     navbarNode.hidden = !showWindowControls && !showWindowTitle;
     windowControlsNode.hidden = !showWindowControls;
