@@ -29,7 +29,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: var(--container-padding);
-  background-color: var(--container-background-color);
+  background: var(--container-background);
   width: max-content;
 }
 #window {

@@ -49,11 +49,11 @@
       "type": "object",
       "title": "VSCodeSnap",
       "properties": {
-        "vscodesnap.backgroundColor": {
+        "vscodesnap.containerBackground": {
           "scope": "resource",
           "type": "string",
           "default": "#abb8c3",
-          "description": "The background color of the snippet's container"
+          "description": "The background of the snippet's container"
         },
         "vscodesnap.boxShadow": {
           "scope": "resource",

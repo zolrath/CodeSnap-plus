@@ -11,7 +11,7 @@ const getConfig = () => {
   if (editor) editorSettings.tabSize = editor.options.tabSize;
 
   const extensionSettings = getSettings('vscodesnap', [
-    'backgroundColor',
+    'containerBackground',
     'boxShadow',
     'containerPadding',
     'roundedCorners',
