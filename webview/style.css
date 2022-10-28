@@ -5,7 +5,7 @@ html {
   --container-background-color: #abb8c3;
   --box-shadow: rgba(0, 0, 0, 0.55) 0px 20px 68px;
   --container-padding: 3em;
-  --window-border-radius: 4px;
+  --window-border-radius: 10px;
   --letter-spacing: 0px;
   box-sizing: border-box;
 }
