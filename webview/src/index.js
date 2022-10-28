@@ -42,6 +42,8 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
     setVar('box-shadow', boxShadow);
     setVar('container-padding', containerPadding);
     setVar('window-border-radius', roundedCorners ? windowBorderRadius : 0);
+    
+    setVar('preview-zoom', 0.5);
 
     navbarNode.hidden = !showWindowControls && !showWindowTitle;
     windowControlsNode.hidden = !showWindowControls;

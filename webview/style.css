@@ -34,6 +34,7 @@ body {
   padding: var(--container-padding);
   background: var(--container-background);
   width: max-content;
+  zoom: var(--preview-zoom);
 }
 
 #window {

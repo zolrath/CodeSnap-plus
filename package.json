@@ -52,7 +52,7 @@
         "vscodesnap.containerBackground": {
           "scope": "resource",
           "type": "string",
-          "default": "#abb8c3",
+          "default": "rgba(0, 0, 0, 0.75)",
           "description": "The background of the snippet's container"
         },
         "vscodesnap.boxShadow": {
@@ -76,7 +76,7 @@
         "vscodesnap.windowBorderRadius": {
           "scope": "resource",
           "type": "string",
-          "default": "4px",
+          "default": "10px",
           "description": "Rounded corners for the window"
         },
         "vscodesnap.showWindowControls": {
