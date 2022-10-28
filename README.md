@@ -1,14 +1,23 @@
-# **This is a fork** of CodeSnap
+# **VsCodeSnap is a fork** of CodeSnap
 
 📸 Take beautiful screenshots of your code in VS Code!
 
 ## This fork changes:
 
+Create this fork because original CodeSnap has not been updated for 16 months, neither pull request are been accepted.
+
+- Buttons bar
+- Save and copy buttons
 - Line breaks: changed so it doesn't break words in half.
+- Line breaks: changed so it doesn't break words in half.
+- Line breaks: changed so it doesn't break words in half.
+
+If at any moment CodeSnap want to merge VsCodeSnap changes, just let me know to make a PR.
 
 ## Original from @adpyke
 
 - Install: `ext install adpyke.codesnap`
+https://github.com/kufii/CodeSnap
 
 ## Features
 
@@ -30,31 +39,17 @@
 - If you'd like to bind CodeSnap to a hotkey, open up your keyboard shortcut settings and bind `codesnap.start` to a custom keybinding.
 - If you'd like to copy to clipboard instead of saving, click the image and press the copy keyboard shortcut (defaults are Ctrl+C on Windows and Linux, Cmd+C on OS X), or bind `codesnap.shutterAction` to `copy` in your settings
 
-## Examples
-
-[Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) + [Operator Mono](https://www.typography.com/fonts/operator/styles/operatormono)
-
-![Example 1](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/material_operator-mono.png)
-
-[Nord](https://github.com/arcticicestudio/nord-visual-studio-code) + [Cascadia Code](https://github.com/microsoft/cascadia-code)
-
-![Example 2](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/nord_cascadia-code.png)
-
-Monokai + [Fira Code](https://github.com/tonsky/FiraCode)
-
-![Example 3](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/monokai_fira-code.png)
-
 ## Configuration
 
-CodeSnap is highly configurable. Here's a list of settings you can change to tune the way your screenshots look:
+VSCodeSnap is highly configurable. Here's a list of settings you can change to tune the way your screenshots look:
 
-**`codesnap.backgroundColor`:** The background color of the snippet's container. Can be any valid CSS color.
+**`codesnap.background`:** The background of the snippet's container. Can be any valid CSS background (including gradients).
 
 **`codesnap.boxShadow`:** The CSS box-shadow for the snippet. Can be any valid CSS box shadow.
 
 **`codesnap.containerPadding`:** The padding for the snippet's container. Can be any valid CSS padding.
 
-**`codesnap.roundedCorners`:** Boolean value to use rounded corners or square corners for the window.
+**`codesnap.windowBorderRadius`:** Integer value to use rounded corners, or zero to use square corners for the window.
 
 **`codesnap.showWindowControls`:** Boolean value to show or hide OS X style window buttons.
 
@@ -68,10 +63,27 @@ CodeSnap is highly configurable. Here's a list of settings you can change to tun
 
 **`codesnap.target`:** Either `container` to take the screenshot with the container, or `window` to only take the window.
 
-**`codesnap.shutterAction`:** Either `save` to save the screenshot into a file, or `copy` to copy the screenshot into the clipboard.
+## Examples
+
+![Example gradient](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/gradient-background-code.png)
+
+[Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) + [Operator Mono](https://www.typography.com/fonts/operator/styles/operatormono)
+
+![Example 1](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/material_operator-mono.png)
+
+[Nord](https://github.com/arcticicestudio/nord-visual-studio-code) + [Cascadia Code](https://github.com/microsoft/cascadia-code)
+
+![Example 2](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/nord_cascadia-code.png)
+
+Monokai + [Fira Code](https://github.com/tonsky/FiraCode)
+
+![Example 3](https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/monokai_fira-code.png)
 
 ## Acknowledgements
 
+The great [CodeSnap](https://github.com/kufii/CodeSnap), for it great extension.
+
 The great [Polacode](https://github.com/octref/polacode), for the initial concept.
 
+[Ray.so](https://ray.so/) for some design inspiration.
 [Carbon](https://carbon.now.sh/) for some design inspiration.
