@@ -67,12 +67,6 @@
           "default": "3em",
           "description": "The padding for the snippet's container"
         },
-        "vscodesnap.roundedCorners": {
-          "scope": "resource",
-          "type": "boolean",
-          "default": true,
-          "description": "Use rounded corners for the window"
-        },
         "vscodesnap.windowBorderRadius": {
           "scope": "resource",
           "type": "string",
@@ -118,16 +112,6 @@
           ],
           "default": "container",
           "description": "Take the shot with or without the container"
-        },
-        "vscodesnap.shutterAction": {
-          "scope": "resource",
-          "type": "string",
-          "enum": [
-            "save",
-            "copy"
-          ],
-          "default": "save",
-          "description": "The behavior of the shutter button"
         },
         "vscodesnap.trimEmptyLines": {
           "scope": "resource",

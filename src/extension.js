@@ -13,8 +13,7 @@ const getConfig = () => {
   const extensionSettings = getSettings('vscodesnap', [
     'containerBackground',
     'boxShadow',
-    'containerPadding',
-    'roundedCorners',
+    'containerPadding',   
     'windowBorderRadius',
     'showWindowControls',
     'showWindowTitle',

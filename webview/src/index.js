@@ -26,8 +26,7 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
       letterSpacing,
       containerBackground,
       boxShadow,
-      containerPadding,
-      roundedCorners,
+      containerPadding,      
       windowBorderRadius,
       showWindowControls,
       showWindowTitle,
@@ -41,7 +40,7 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
     setVar('container-background', containerBackground);
     setVar('box-shadow', boxShadow);
     setVar('container-padding', containerPadding);
-    setVar('window-border-radius', roundedCorners ? windowBorderRadius : 0);
+    setVar('window-border-radius', windowBorderRadius);
     
     setVar('preview-zoom', 0.5);
 
