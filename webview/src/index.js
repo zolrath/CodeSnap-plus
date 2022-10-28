@@ -10,11 +10,10 @@ const btnCopy = $('#button-copy');
 
 let config;
 
-btnSave.addEventListener('click', () => takeSnap(config));
+btnSave.addEventListener('click', () => takeSnap({ ...config, shutterAction: 'save' }));
 btnCopy.addEventListener('click', () => takeSnap({ ...config, shutterAction: 'copy' }));
 
 document.addEventListener('copy', () => takeSnap({ ...config, shutterAction: 'copy' }));
-
 document.addEventListener('paste', (e) => pasteCode(config, e.clipboardData));
 
 window.addEventListener('message', ({ data: { type, ...cfg } }) => {

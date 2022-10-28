@@ -22,7 +22,6 @@ const getConfig = () => {
     'realLineNumbers',
     'transparentBackground',
     'target',
-    'shutterAction',
     'trimEmptyLines'
   ]);
 
