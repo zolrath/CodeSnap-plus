@@ -14,19 +14,19 @@ Create this fork because original CodeSnap has not been updated for 16 months, n
 
 If at any moment CodeSnap want to merge VsCodeSnap changes, just let me know to make a PR.
 
-## Original from @adpyke
+## Instalation
+- Install: `ext install luisllamas.codesnap`
 
-- Install: `ext install adpyke.codesnap`
-https://github.com/kufii/CodeSnap
+## Original readme from @adpyke.codesnap
 
-## Features
+### Features
 
 - Quickly save screenshots of your code
 - Copy screenshots to your clipboard
 - Show line numbers
 - Many other configuration options
 
-## Usage Instructions
+### Usage Instructions
 
 1. Open the command palette (Ctrl+Shift+P on Windows and Linux, Cmd+Shift+P on OS X) and search for `CodeSnap`.
 2. Select the code you'd like to screenshot.
@@ -39,7 +39,7 @@ https://github.com/kufii/CodeSnap
 - If you'd like to bind CodeSnap to a hotkey, open up your keyboard shortcut settings and bind `codesnap.start` to a custom keybinding.
 - If you'd like to copy to clipboard instead of saving, click the image and press the copy keyboard shortcut (defaults are Ctrl+C on Windows and Linux, Cmd+C on OS X), or bind `codesnap.shutterAction` to `copy` in your settings
 
-## Configuration
+### Configuration
 
 VSCodeSnap is highly configurable. Here's a list of settings you can change to tune the way your screenshots look:
 
@@ -63,7 +63,7 @@ VSCodeSnap is highly configurable. Here's a list of settings you can change to t
 
 **`codesnap.target`:** Either `container` to take the screenshot with the container, or `window` to only take the window.
 
-## Examples
+### Examples
 
 ![Example gradient](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/gradient-background-code.png)
 
@@ -79,7 +79,7 @@ Monokai + [Fira Code](https://github.com/tonsky/FiraCode)
 
 ![Example 3](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/monokai_fira-code.png)
 
-## Acknowledgements
+### Acknowledgements
 
 The great [CodeSnap](https://github.com/kufii/CodeSnap), for it great extension.
 
