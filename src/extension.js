@@ -11,6 +11,7 @@ const getConfig = () => {
   if (editor) editorSettings.tabSize = editor.options.tabSize;
 
   const extensionSettings = getSettings('vscodesnap', [
+    'backgroundPalette',
     'containerBackground',
     'boxShadow',
     'containerPadding',   
@@ -32,6 +33,8 @@ const getConfig = () => {
     const activeFileName = editor.document.uri.path.split('/').pop();
     windowTitle = `${vscode.workspace.name} - ${activeFileName}`;
   }
+
+  applyBackgroundPalettes(extensionSettings); 
 
   return {
     ...editorSettings,
@@ -104,3 +107,11 @@ module.exports.activate = (context) =>
   context.subscriptions.push(
     vscode.commands.registerCommand('vscodesnap.start', () => runCommand(context))
   );
+
+function applyBackgroundPalettes(extensionSettings) {
+  switch (extensionSettings.backgroundPalette) {
+    case 'magnum': extensionSettings.containerBackground = "#000000"; break;
+    case 'tropic': extensionSettings.containerBackground = "#FFFFFF"; break;
+  }
+}
+
