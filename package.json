@@ -49,6 +49,23 @@
       "type": "object",
       "title": "VSCodeSnap",
       "properties": {
+        "vscodesnap.background": {
+          "scope": "resource",
+          "type": "string",
+          "enum": [
+            "custom",
+            "magnum",
+            "pinky",
+            "passion",
+            "steel",
+            "tropic",
+            "forest",
+            "blueman",
+            "sand"
+          ],
+          "default": "magnum",
+          "description": "Take the shot with or without the container"
+        },
         "vscodesnap.containerBackground": {
           "scope": "resource",
           "type": "string",
