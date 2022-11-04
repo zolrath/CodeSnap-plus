@@ -195,3 +195,50 @@ button {
 .label.right{
   text-align: right
 }
+
+.line-highlight {
+  position: relative;
+  background-color: rgb(125 211 252 / 0.2);
+}
+
+.line-highlight::before {
+  position: absolute;
+  left: -0.75rem;
+  display: block;
+  height: 100%;
+  width: 0.25rem;
+  content: "";
+  background-color: rgb(14 165 233);
+}
+
+.line-highlight-git-add {
+  position: relative;
+  background-color: rgb(134 239 172 / 0.15);
+}
+
+.line-highlight-git-add::before {
+  position: absolute;
+  left: -0.75rem;
+  display: block;
+  height: 100%;
+  width: auto;
+  font-weight: 700;
+  color: rgb(134 239 172);  
+  content: "+";
+}
+
+.line-highlight-git-remove {
+  position: relative;
+  background-color: rgb(252 165 165 / 0.15);
+}
+
+.line-highlight-git-remove::before {
+  position: absolute;
+  left: -0.75rem;
+  display: block;
+  height: 100%;
+  width: auto;
+  font-weight: 700;
+  color: rgb(239 68 68);  
+  content: "-";
+}

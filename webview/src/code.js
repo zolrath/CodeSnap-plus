@@ -18,6 +18,39 @@ const setupLines = (node, config) => {
       lineNum.classList.add('line-number');
       lineNum.textContent = idx + 1 + config.startLine;
       newRow.appendChild(lineNum);
+
+       // lineNumber click event
+       lineNum.onclick = function (e) {
+        var firstRowIsWhiteSpace = this.nextSibling.firstChild.firstChild.innerText.trim() === "";
+
+        if(this.parentNode.classList.contains("line-highlight")) {
+
+          this.parentNode.classList.remove("line-highlight");
+          this.parentNode.classList.add("line-highlight-git-add");
+          this.classList.add('!text-white')
+
+        } else if (this.parentNode.classList.contains("line-highlight-git-add")) {
+
+          this.parentNode.classList.remove("line-highlight-git-add");
+          this.parentNode.classList.add("line-highlight-git-remove");
+          this.classList.add('!text-white')
+
+        } else if (this.parentNode.classList.contains("line-highlight-git-remove")) {
+
+          this.parentNode.classList.remove("line-highlight");
+          this.parentNode.classList.remove("line-highlight-git-add");
+          this.parentNode.classList.remove("line-highlight-git-remove");
+          lineNum.classList.remove('text-white')
+
+        } else {
+          this.parentNode.classList.add("line-highlight");
+          this.parentNode.classList.remove("line-highlight-git-add");
+          this.parentNode.classList.remove("line-highlight-git-remove");
+          lineNum.classList.add('!text-white')
+        }
+      };
+      lineNum.textContent = idx + 1 + config.startLine;
+      newRow.appendChild(lineNum);
     }
 
     const span = document.createElement('span');
@@ -26,9 +59,22 @@ const setupLines = (node, config) => {
 
     const lineCodeDiv = document.createElement('div');
     lineCodeDiv.classList.add('line-code');
-    const lineCode = document.createElement('span');
-    lineCode.innerHTML = row.innerHTML;
-    lineCodeDiv.appendChild(lineCode);
+
+    if (row.innerText.trim().length === 1 && row.childNodes.length === 2) {
+      var char = row.innerText.trim();
+
+      const lineCode = document.createElement('span');
+      lineCode.innerHTML = row.innerHTML.split(char).join("");
+      lineCodeDiv.appendChild(lineCode);
+
+      const lineCode1 = document.createElement('span');
+      lineCode1.innerHTML = row.innerHTML.replace(/&nbsp;/ig, "");
+      lineCodeDiv.appendChild(lineCode1);
+    } else {
+      const lineCode = document.createElement('span');
+      lineCode.innerHTML = row.innerHTML;
+      lineCodeDiv.appendChild(lineCode);
+    }
 
     newRow.appendChild(lineCodeDiv);
   });
