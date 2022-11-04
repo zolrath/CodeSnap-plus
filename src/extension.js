@@ -2,8 +2,14 @@
 
 const vscode = require('vscode');
 const path = require('path');
-const { homedir } = require('os');
-const { readHtml, writeFile, getSettings} = require('./util');
+const {
+  homedir
+} = require('os');
+const {
+  readHtml,
+  writeFile,
+  getSettings
+} = require('./util');
 
 const getConfig = () => {
   const editorSettings = getSettings('editor', ['fontLigatures', 'tabSize', 'letterSpacing']);
@@ -14,7 +20,7 @@ const getConfig = () => {
     'backgroundPalette',
     'containerBackground',
     'boxShadow',
-    'containerPadding',   
+    'containerPadding',
     'windowBorderRadius',
     'showWindowControls',
     'showWindowTitle',
@@ -34,7 +40,7 @@ const getConfig = () => {
     windowTitle = `${vscode.workspace.name} - ${activeFileName}`;
   }
 
-  applyBackgroundPalettes(extensionSettings); 
+  applyBackgroundPalettes(extensionSettings);
 
   return {
     ...editorSettings,
@@ -47,9 +53,10 @@ const getConfig = () => {
 const createPanel = async (context) => {
   const panel = vscode.window.createWebviewPanel(
     'VSCodeSnap',
-    'VSCodeSnap 📸',
-    { viewColumn: vscode.ViewColumn.Beside, preserveFocus: true },
-    {
+    'VSCodeSnap 📸', {
+      viewColumn: vscode.ViewColumn.Beside,
+      preserveFocus: true
+    }, {
       enableScripts: true,
       localResourceRoots: [vscode.Uri.file(context.extensionPath)]
     }
@@ -65,7 +72,9 @@ const createPanel = async (context) => {
 let lastUsedImageUri = vscode.Uri.file(path.resolve(homedir(), 'Desktop/code.png'));
 const saveImage = async (data) => {
   const uri = await vscode.window.showSaveDialog({
-    filters: { Images: ['png'] },
+    filters: {
+      Images: ['png']
+    },
     defaultUri: lastUsedImageUri
   });
   lastUsedImageUri = uri;
@@ -80,12 +89,20 @@ const runCommand = async (context) => {
 
   const update = async () => {
     await vscode.commands.executeCommand('editor.action.clipboardCopyWithSyntaxHighlightingAction');
-    panel.webview.postMessage({ type: 'update', ...getConfig() });
+    panel.webview.postMessage({
+      type: 'update',
+      ...getConfig()
+    });
   };
 
-  const flash = () => panel.webview.postMessage({ type: 'flash' });
+  const flash = () => panel.webview.postMessage({
+    type: 'flash'
+  });
 
-  panel.webview.onDidReceiveMessage(async ({ type, data }) => {
+  panel.webview.onDidReceiveMessage(async ({
+    type,
+    data
+  }) => {
     if (type === 'save') {
       flash();
       await saveImage(data);
@@ -110,8 +127,21 @@ module.exports.activate = (context) =>
 
 function applyBackgroundPalettes(extensionSettings) {
   switch (extensionSettings.backgroundPalette) {
-    case 'magnum': extensionSettings.containerBackground = "#000000"; break;
-    case 'tropic': extensionSettings.containerBackground = "#FFFFFF"; break;
+    case 'magnum':
+      extensionSettings.containerBackground = "linear-gradient(140deg, rgb(207, 47, 152), rgb(106, 61, 236))";
+    case 'pinky':
+      extensionSettings.containerBackground = "linear-gradient(140deg, rgb(165, 142, 251), rgb(233, 191, 248))";
+    case 'passion':
+      extensionSettings.containerBackground = "linear-gradient(140deg, rgb(255, 99, 99), rgb(115, 52, 52))";
+    case 'steel':
+      extensionSettings.containerBackground = "linear-gradient(140deg, rgb(189, 227, 236), rgb(54, 54, 84))";
+    case 'tropic':
+      extensionSettings.containerBackground = "linear-gradient(140deg, rgb(89, 212, 153), rgb(160, 135, 45))";
+    case 'forest':
+      extensionSettings.containerBackground = "linear-gradient(140deg, rgb(76, 200, 200), rgb(32, 32, 51))";
+    case 'blueman':
+      extensionSettings.containerBackground = "linear-gradient(140deg, rgb(142, 199, 251), rgb(28, 85, 170))";
+    case 'san':
+      extensionSettings.containerBackground = "linear-gradient(140deg, rgb(255, 207, 115), rgb(255, 122, 47))";
   }
 }
-
