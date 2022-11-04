@@ -129,19 +129,27 @@ function applyBackgroundPalettes(extensionSettings) {
   switch (extensionSettings.backgroundPalette) {
     case 'magnum':
       extensionSettings.containerBackground = "linear-gradient(140deg, rgb(207, 47, 152), rgb(106, 61, 236))";
+      break;
     case 'pinky':
       extensionSettings.containerBackground = "linear-gradient(140deg, rgb(165, 142, 251), rgb(233, 191, 248))";
+      break;
     case 'passion':
       extensionSettings.containerBackground = "linear-gradient(140deg, rgb(255, 99, 99), rgb(115, 52, 52))";
+      break;
     case 'steel':
       extensionSettings.containerBackground = "linear-gradient(140deg, rgb(189, 227, 236), rgb(54, 54, 84))";
+      break;
     case 'tropic':
       extensionSettings.containerBackground = "linear-gradient(140deg, rgb(89, 212, 153), rgb(160, 135, 45))";
+      break;
     case 'forest':
       extensionSettings.containerBackground = "linear-gradient(140deg, rgb(76, 200, 200), rgb(32, 32, 51))";
+      break;
     case 'blueman':
       extensionSettings.containerBackground = "linear-gradient(140deg, rgb(142, 199, 251), rgb(28, 85, 170))";
+      break;
     case 'san':
       extensionSettings.containerBackground = "linear-gradient(140deg, rgb(255, 207, 115), rgb(255, 122, 47))";
+      break;
   }
 }
