@@ -18,37 +18,7 @@ const setupLines = (node, config) => {
       lineNum.classList.add('line-number');
       lineNum.textContent = idx + 1 + config.startLine;
       newRow.appendChild(lineNum);
-
-       // lineNumber click event
-       lineNum.onclick = function (e) {
-        var firstRowIsWhiteSpace = this.nextSibling.firstChild.firstChild.innerText.trim() === "";
-
-        if(this.parentNode.classList.contains("line-highlight")) {
-
-          this.parentNode.classList.remove("line-highlight");
-          this.parentNode.classList.add("line-highlight-git-add");
-          this.classList.add('!text-white')
-
-        } else if (this.parentNode.classList.contains("line-highlight-git-add")) {
-
-          this.parentNode.classList.remove("line-highlight-git-add");
-          this.parentNode.classList.add("line-highlight-git-remove");
-          this.classList.add('!text-white')
-
-        } else if (this.parentNode.classList.contains("line-highlight-git-remove")) {
-
-          this.parentNode.classList.remove("line-highlight");
-          this.parentNode.classList.remove("line-highlight-git-add");
-          this.parentNode.classList.remove("line-highlight-git-remove");
-          lineNum.classList.remove('text-white')
-
-        } else {
-          this.parentNode.classList.add("line-highlight");
-          this.parentNode.classList.remove("line-highlight-git-add");
-          this.parentNode.classList.remove("line-highlight-git-remove");
-          lineNum.classList.add('!text-white')
-        }
-      };
+      
       lineNum.textContent = idx + 1 + config.startLine;
       newRow.appendChild(lineNum);
     }
@@ -74,6 +44,8 @@ const setupLines = (node, config) => {
       const lineCode = document.createElement('span');
       lineCode.innerHTML = row.innerHTML;
       lineCodeDiv.appendChild(lineCode);
+
+      lineCode.addEventListener("click", toggleLineHighlight);
     }
 
     newRow.appendChild(lineCodeDiv);
@@ -120,4 +92,27 @@ export const pasteCode = (config, clipboard) => {
   stripInitialIndent(snippetNode);
   if(config.trimEmptyLines) trimEmptyLines(snippetNode, config);
   setupLines(snippetNode, config);
+};
+
+
+function toggleLineHighlight(e) {
+  if(this.parentNode.parentNode.classList.contains("line-highlight")) {
+    this.parentNode.parentNode.classList.remove("line-highlight");
+    this.parentNode.parentNode.classList.add("line-highlight-git-add");
+    this.classList.add('!text-white')
+  } else if (this.parentNode.parentNode.classList.contains("line-highlight-git-add")) {
+    this.parentNode.parentNode.classList.remove("line-highlight-git-add");
+    this.parentNode.parentNode.classList.add("line-highlight-git-remove");
+    this.classList.add('!text-white')
+  } else if (this.parentNode.parentNode.classList.contains("line-highlight-git-remove")) {
+    this.parentNode.parentNode.classList.remove("line-highlight");
+    this.parentNode.parentNode.classList.remove("line-highlight-git-add");
+    this.parentNode.parentNode.classList.remove("line-highlight-git-remove");
+    this.classList.remove('text-white')
+  } else {
+    this.parentNode.parentNode.classList.add("line-highlight");
+    this.parentNode.parentNode.classList.remove("line-highlight-git-add");
+    this.parentNode.parentNode.classList.remove("line-highlight-git-remove");
+    this.classList.add('!text-white')
+  }
 };
