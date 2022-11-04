@@ -90,11 +90,17 @@
           "default": "10px",
           "description": "Rounded corners for the window"
         },
-        "vscodesnap.showWindowControls": {
+        "vscodesnap.windowControlStyle": {
           "scope": "resource",
-          "type": "boolean",
-          "default": true,
-          "description": "Display OS X style window controls"
+          "type": "string",
+          "enum": [
+            "Windows",
+            "OS X",
+            "Gray dots",
+            "None"
+          ],
+          "default": "Windows",
+          "description": "Display window controls"
         },
         "vscodesnap.showWindowTitle": {
           "scope": "resource",

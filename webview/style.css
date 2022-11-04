@@ -7,6 +7,9 @@ html {
   --container-padding: 3em;
   --window-border-radius: 10px;
   --letter-spacing: 0px;
+  --red-dot-background: #ff5f5a;
+  --yellow-dot-background: #ffbe2e;
+  --green-dot-background:#2aca44;
   box-sizing: border-box;
 }
 
@@ -56,9 +59,19 @@ body {
   text-align: center;
 }
 
-#window-controls {
+#mac-controls {
   display: flex;
   float: left;
+  margin-top: 2px;
+}
+
+#mac-controls[hidden] {
+  display: none;
+}
+
+#window-controls {
+  display: flex;
+  float: right;
   margin-top: 2px;
 }
 
@@ -144,15 +157,15 @@ button {
 }
 
 .red {
-  background-color: #ff5f5a;
+  background-color: var(--red-dot-background);
 }
 
 .yellow {
-  background-color: #ffbe2e;
+  background-color: var(--yellow-dot-background);
 }
 
 .green {
-  background-color: #2aca44;
+  background-color: var(--green-dot-background);
 }
 
 .size-test {

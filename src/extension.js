@@ -22,7 +22,7 @@ const getConfig = () => {
     'boxShadow',
     'containerPadding',
     'windowBorderRadius',
-    'showWindowControls',
+    'windowControlStyle',
     'showWindowTitle',
     'showLineNumbers',
     'realLineNumbers',

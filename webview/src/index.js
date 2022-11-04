@@ -4,6 +4,7 @@ import { takeSnap, cameraFlashAnimation } from './snap.js';
 
 const navbarNode = $('#navbar');
 const windowControlsNode = $('#window-controls');
+const macControlsNode = $('#mac-controls');
 const windowTitleNode = $('#window-title');
 const btnSave = $('#button-save');
 const btnCopy = $('#button-copy');
@@ -32,7 +33,7 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
       boxShadow,
       containerPadding,      
       windowBorderRadius,
-      showWindowControls,
+      windowControlStyle,
       showWindowTitle,
       windowTitle,
     } = config;
@@ -48,8 +49,18 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
     
     setVar('preview-zoom', 0.75);
 
-    navbarNode.hidden = !showWindowControls && !showWindowTitle;
-    windowControlsNode.hidden = !showWindowControls;
+    navbarNode.hidden = windowControlStyle !== "None" && !showWindowTitle;
+    windowControlsNode.hidden = windowControlStyle !== "Windows";
+    macControlsNode.hidden = windowControlStyle !== "OS X" &&  windowControlStyle !== "Gray dots" ;
+
+    if(windowControlStyle === "Gray dots")
+    {
+      setVar('red-dot-background', "#555555");
+      setVar('yellow-dot-background', "#555555");
+      setVar('green-dot-background', "#555555");
+    }
+
+
     windowTitleNode.hidden = !showWindowTitle;
 
     windowTitleNode.textContent = windowTitle;
