@@ -9,7 +9,7 @@
   },
   "publisher": "luisllamas",
   "icon": "icon.png",
-  "license": "MIT",
+  "license": "GPL3",
   "engines": {
     "vscode": "^1.52.0"
   },
