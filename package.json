@@ -72,6 +72,22 @@
           "default": "rgba(0, 0, 0, 0.75)",
           "description": "The background of the snippet's container when palette is custom"
         },
+        "vscodesnap.transparentBackground": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false,
+          "description": "Use a transparent background when taking the screenshot"
+        },
+        "vscodesnap.target": {
+          "scope": "resource",
+          "type": "string",
+          "enum": [
+            "container",
+            "window"
+          ],
+          "default": "container",
+          "description": "Take the shot with or without the container"
+        },
         "vscodesnap.boxShadow": {
           "scope": "resource",
           "type": "string",
@@ -119,22 +135,6 @@
           "type": "boolean",
           "default": false,
           "description": "Start from the selection's line number instead of 1"
-        },
-        "vscodesnap.transparentBackground": {
-          "scope": "resource",
-          "type": "boolean",
-          "default": false,
-          "description": "Use a transparent background when taking the screenshot"
-        },
-        "vscodesnap.target": {
-          "scope": "resource",
-          "type": "string",
-          "enum": [
-            "container",
-            "window"
-          ],
-          "default": "container",
-          "description": "Take the shot with or without the container"
         },
         "vscodesnap.trimEmptyLines": {
           "scope": "resource",
