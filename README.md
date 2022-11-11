@@ -30,6 +30,7 @@ If at any moment CodeSnap want to merge VsCodeSnap changes, just let me know to 
 
 ## Instalation
 - Install from extensions panel
+  
 ![Example5](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example5.png)
 
 - Or install from terminal: `ext install luisllamas.codesnap`
