@@ -2,15 +2,24 @@
 
 📸 Take beautiful screenshots of your code in VS Code!
 
+![Example1](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example1.png)
+
+
+
+
 ## This fork changes:
 
 Create this fork because original CodeSnap has not been updated for 16 months, neither pull request are been accepted.
 
-- Buttons bar
-- Save and copy buttons
-- Line breaks: changed so it doesn't break words in half.
-- Line breaks: changed so it doesn't break words in half.
-- Line breaks: changed so it doesn't break words in half.
+- Gradient background
+![Example2](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example2.png)
+- Several window buttons style (Windows, OS X, y Gray Dots)
+![Example3](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example3.png)
+- Buttons bar with save and copy buttons
+- Zoom
+- Line breaks, changed so it doesn't break words in half.
+- Trim lines
+- Much more...
 
 If at any moment CodeSnap want to merge VsCodeSnap changes, just let me know to make a PR.
 
@@ -43,25 +52,31 @@ If at any moment CodeSnap want to merge VsCodeSnap changes, just let me know to 
 
 VSCodeSnap is highly configurable. Here's a list of settings you can change to tune the way your screenshots look:
 
-**`codesnap.background`:** The background of the snippet's container. Can be any valid CSS background (including gradients).
+**`vscodesnap.backgroundPalette`:** Predefined background palettes.
 
-**`codesnap.boxShadow`:** The CSS box-shadow for the snippet. Can be any valid CSS box shadow.
+**`vscodesnap.containerBackground`:** The background of the snippet's container. Only applies when Palette is `Custom` Can be any valid CSS background (including gradients).
 
-**`codesnap.containerPadding`:** The padding for the snippet's container. Can be any valid CSS padding.
+**`vscodesnap.boxShadow`:** The CSS box-shadow for the snippet. Can be any valid CSS box shadow.
 
-**`codesnap.windowBorderRadius`:** Integer value to use rounded corners, or zero to use square corners for the window.
+**`vscodesnap.transparentBackground`:** Boolean value to use a transparent background when taking the screenshot.
 
-**`codesnap.showWindowControls`:** Boolean value to show or hide OS X style window buttons.
+**`vscodesnap.target`:** Either `container` to take the screenshot with the container, or `window` to only take the window.
 
-**`codesnap.showWindowTitle`:** Boolean value to show or hide window title `folder_name - file_name`.
+**`vscodesnap.containerPadding`:** The padding for the snippet's container. Can be any valid CSS padding.
 
-**`codesnap.showLineNumbers`:** Boolean value to show or hide line numbers.
+**`vscodesnap.windowBorderRadius`:** Integer value to use rounded corners, or zero to use square corners for the window.
 
-**`codesnap.realLineNumbers`:** Boolean value to start from the real line number of the file instead of 1.
+**`vscodesnap.showWindowControls`:** Boolean value to show or hide top bar with title + window buttons.
 
-**`codesnap.transparentBackground`:** Boolean value to use a transparent background when taking the screenshot.
+**`vscodesnap.windowTitleStyle`:** Window title style, can be `folder_name - file_name`, `file_name`, `custom` or `none`.
 
-**`codesnap.target`:** Either `container` to take the screenshot with the container, or `window` to only take the window.
+**`vscodesnap.windowTitleCustomStyle`:** Window title text when Title Style is set to `none`.
+
+**`vscodesnap.showLineNumbers`:** Boolean value to show or hide line numbers.
+
+**`vscodesnap.realLineNumbers`:** Boolean value to start from the real line number of the file instead of 1.
+
+**`vscodesnap.trimEmptyLines`:** Trim off empty lines at the beginning and at the end.
 
 ### Examples
 

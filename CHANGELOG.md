@@ -4,7 +4,12 @@ All notable changes to the "codesnap" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [1.4.1]
+## [1.5.1]
+
+- Bug: Typo in 'sand' gradient
+- Bug: Error in OS X Style not showing colors correctly
+
+## [1.5.0]
 
 - Added windows title options
  
