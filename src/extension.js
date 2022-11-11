@@ -164,7 +164,7 @@ function applyBackgroundPalettes(extensionSettings) {
     case 'blueman':
       extensionSettings.containerBackground = "linear-gradient(140deg, rgb(142, 199, 251), rgb(28, 85, 170))";
       break;
-    case 'san':
+    case 'sand':
       extensionSettings.containerBackground = "linear-gradient(140deg, rgb(255, 207, 115), rgb(255, 122, 47))";
       break;
   }

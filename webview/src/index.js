@@ -1,6 +1,15 @@
-import { $, setVar, consoleLog} from './util.js';
-import { pasteCode } from './code.js';
-import { takeSnap, cameraFlashAnimation } from './snap.js';
+import {
+  $,
+  setVar,
+  consoleLog
+} from './util.js';
+import {
+  pasteCode
+} from './code.js';
+import {
+  takeSnap,
+  cameraFlashAnimation
+} from './snap.js';
 
 const navbarNode = $('#navbar');
 const windowControlsNode = $('#window-controls');
@@ -12,16 +21,30 @@ const sliderZoom = $('#slider-zoom');
 
 let config;
 
-btnSave.addEventListener('click', () => takeSnap({ ...config, shutterAction: 'save' }));
-btnCopy.addEventListener('click', () => takeSnap({ ...config, shutterAction: 'copy' }));
+btnSave.addEventListener('click', () => takeSnap({
+  ...config,
+  shutterAction: 'save'
+}));
+btnCopy.addEventListener('click', () => takeSnap({
+  ...config,
+  shutterAction: 'copy'
+}));
 
 sliderZoom.addEventListener('input', (e) => setVar('preview-zoom', sliderZoom.value / 100));
 
-document.addEventListener('copy', () => takeSnap({ ...config, shutterAction: 'copy' }));
+document.addEventListener('copy', () => takeSnap({
+  ...config,
+  shutterAction: 'copy'
+}));
 document.addEventListener('paste', (e) => pasteCode(config, e.clipboardData));
 
 
-window.addEventListener('message', ({ data: { type, ...cfg } }) => {
+window.addEventListener('message', ({
+  data: {
+    type,
+    ...cfg
+  }
+}) => {
   if (type === 'update') {
     config = cfg;
 
@@ -31,13 +54,13 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
       letterSpacing,
       containerBackground,
       boxShadow,
-      containerPadding,      
+      containerPadding,
       windowBorderRadius,
       windowControlStyle,
       showWindowTitle,
       windowTitle,
     } = config;
-    
+
     setVar('ligatures', fontLigatures ? 'normal' : 'none');
     if (typeof fontLigatures === 'string') setVar('font-features', fontLigatures);
     setVar('letter-spacing', letterSpacing);
@@ -46,20 +69,22 @@ window.addEventListener('message', ({ data: { type, ...cfg } }) => {
     setVar('box-shadow', boxShadow);
     setVar('container-padding', containerPadding);
     setVar('window-border-radius', windowBorderRadius);
-    
+
     setVar('preview-zoom', 0.75);
 
     navbarNode.hidden = windowControlStyle !== "None" && !showWindowTitle;
     windowControlsNode.hidden = windowControlStyle !== "Windows";
-    macControlsNode.hidden = windowControlStyle !== "OS X" &&  windowControlStyle !== "Gray dots" ;
+    macControlsNode.hidden = windowControlStyle !== "OS X" && windowControlStyle !== "Gray dots";
 
-    if(windowControlStyle === "Gray dots")
-    {
+    if (windowControlStyle === "Gray dots") {
       setVar('red-dot-background', "#555555");
       setVar('yellow-dot-background', "#555555");
       setVar('green-dot-background', "#555555");
+    } else {
+      setVar('red-dot-background', "#ff5f5a");
+      setVar('yellow-dot-background', "#ffbe2e");
+      setVar('green-dot-background', "#2aca44");
     }
-
 
     windowTitleNode.hidden = !showWindowTitle;
 
