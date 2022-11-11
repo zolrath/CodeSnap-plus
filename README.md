@@ -4,9 +4,6 @@
 
 ![Example1](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example1.png)
 
-
-
-
 ## This fork changes:
 
 Create this fork because original CodeSnap has not been updated for 16 months, neither pull request are been accepted.
@@ -15,6 +12,7 @@ Create this fork because original CodeSnap has not been updated for 16 months, n
 ![Example2](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example2.png)
 - Several window buttons style (Windows, OS X, y Gray Dots)
 ![Example3](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example3.png)
+- Line Highlight. Click over any code line to alternate between the the available modes blue (|), + green (+) and red (-)
 - Buttons bar with save and copy buttons
 - Zoom
 - Line breaks, changed so it doesn't break words in half.
