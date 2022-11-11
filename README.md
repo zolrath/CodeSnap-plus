@@ -18,7 +18,7 @@ Create this fork because original CodeSnap has not been updated for 16 months, n
 
 - Line Highlight. Click over any code line to alternate between the the available modes blue (|), + green (+) and red (-)
 
-![Example3](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example4.png)
+![Example4](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example4.png)
 
 - Buttons bar with save and copy buttons
 - Zoom
@@ -29,7 +29,10 @@ Create this fork because original CodeSnap has not been updated for 16 months, n
 If at any moment CodeSnap want to merge VsCodeSnap changes, just let me know to make a PR.
 
 ## Instalation
-- Install: `ext install luisllamas.codesnap`
+- Install from extensions panel
+![Example5](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example5.png)
+
+- Or install from terminal: `ext install luisllamas.codesnap`
 
 ## Original readme from @adpyke.codesnap
 
