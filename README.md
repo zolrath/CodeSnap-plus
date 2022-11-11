@@ -13,6 +13,7 @@ Create this fork because original CodeSnap has not been updated for 16 months, n
 - Several window buttons style (Windows, OS X, y Gray Dots)
 ![Example3](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example3.png)
 - Line Highlight. Click over any code line to alternate between the the available modes blue (|), + green (+) and red (-)
+- ![Example3](https://raw.githubusercontent.com/luisllamasbinaburo/CodeSnap/master/examples/vscode-snap-example4.png)
 - Buttons bar with save and copy buttons
 - Zoom
 - Line breaks, changed so it doesn't break words in half.
