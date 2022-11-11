@@ -24,6 +24,8 @@ const getConfig = () => {
     'windowBorderRadius',
     'windowControlStyle',
     'showWindowTitle',
+    'windowTitleStyle',
+    'windowTitleCustomStyle',
     'showLineNumbers',
     'realLineNumbers',
     'transparentBackground',
@@ -36,8 +38,22 @@ const getConfig = () => {
 
   let windowTitle = '';
   if (editor && extensionSettings.showWindowTitle) {
-    const activeFileName = editor.document.uri.path.split('/').pop();
-    windowTitle = `${vscode.workspace.name} - ${activeFileName}`;
+    {
+      if(extensionSettings.windowTitleStyle ==="Workspace + Filename")
+      {
+        const activeFileName = editor.document.uri.path.split('/').pop();
+        windowTitle = `${vscode.workspace.name} - ${activeFileName}`;
+      }
+      if(extensionSettings.windowTitleStyle ==="Filename")
+      {
+        const activeFileName = editor.document.uri.path.split('/').pop();
+        windowTitle = `${activeFileName}`;
+      }
+      if(extensionSettings.windowTitleStyle ==="Custom")
+      {       
+        windowTitle = extensionSettings.windowTitleCustomStyle;
+      }
+    }
   }
 
   applyBackgroundPalettes(extensionSettings);

@@ -2,7 +2,7 @@
   "name": "vscodesnap",
   "displayName": "VSCodeSnap",
   "description": "📷 Take beautiful screenshots of your code",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/luisllamasbinaburo/VSCodeSnap"
@@ -106,6 +106,12 @@
           "default": "10px",
           "description": "Rounded corners for the window"
         },
+        "vscodesnap.showWindowTitle": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false,
+          "description": "Display window title with open folder / file name"
+        },
         "vscodesnap.windowControlStyle": {
           "scope": "resource",
           "type": "string",
@@ -118,11 +124,23 @@
           "default": "Windows",
           "description": "Display window controls"
         },
-        "vscodesnap.showWindowTitle": {
+        "vscodesnap.windowTitleStyle": {
           "scope": "resource",
-          "type": "boolean",
-          "default": false,
-          "description": "Display window title with open folder / file name"
+          "type": "string",
+          "enum": [
+            "Workspace + Filename",
+            "Filename",
+            "Custom",
+            "None"
+          ],
+          "default": "Workspace + Filename",
+          "description": "Window title style"
+        },
+        "vscodesnap.windowTitleCustomStyle": {
+          "scope": "resource",
+          "type": "string",
+          "default": "VSCodeSnap",
+          "description": "The window title text when style is custom"
         },
         "vscodesnap.showLineNumbers": {
           "scope": "resource",
