@@ -133,8 +133,9 @@ const setupLines = (node, config) => {
 
 const stripInitialIndent = (node) => {
   const regIndent = /^\s+/u;
-  const initialSpans = $$(':scope > div > span:first-child', node);
+  let initialSpans = $$(':scope > div > span:first-child', node);
   if (initialSpans.some((span) => !regIndent.test(span.textContent))) return;
+  initialSpans = initialSpans.filter((span) => span.textContent.trim() === "");
   const minIndent = Math.min(
     ...initialSpans.map((span) => span.textContent.match(regIndent)[0].length)
   );
